@@ -1,0 +1,212 @@
+@use "./variables" as *;
+
+
+.game-board-screen {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    pointer-events: initial;
+    text-align: center;
+    transition: all .3s;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        height: 50vh;
+        padding-bottom: .7em;
+
+        li {
+            width: 100%;
+        }
+
+        button {
+            position: relative;
+            display: block;
+            background: transparent;
+            width: 100%;
+            height: 80px;
+            box-sizing: border-box;
+            color: $solidWhite;
+            border: none;
+
+            /* Button Border Style */
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                left: 0px;
+                height: 39px;
+                z-index: -1;
+            }
+
+            &:before {
+                top: 0px;
+                transform: perspective(10px) rotateX(2deg);
+            }
+
+            &:after {
+                top: 41px;
+                transform: perspective(10px) rotateX(-2deg);
+            }
+
+            &.border:before,
+            &.border:after {
+                border: 2px solid $solidWhite;
+                background-color: $secondaryColour;
+            }
+
+            &.border:before {
+                border-bottom: none;
+                /* to prevent the border-line showing up in the middle of the shape */
+            }
+
+            &.border:after {
+                border-top: none;
+                /* to prevent the border-line showing up in the middle of the shape */
+            }
+
+            /* Button hover styles */
+            &.border:hover:before,
+            &.border:hover:after {
+                background-color: $accentColour;
+            }
+        }
+    }
+
+
+    .score-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .prizes-container {
+        position: relative;
+    }
+
+    .prize-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            position: relative;
+            width: 150px;
+            height: 60px;
+            line-height: 60px;
+            box-sizing: border-box;
+            color: $solidWhite;
+            border: none;
+
+            &.threshold {
+
+                &.border:before,
+                &.border:after {
+                    background-color: $secondaryColour;
+                }
+            }
+
+            &.active-prize {
+
+                &.border:before,
+                &.border:after {
+                    background-color: $lightGreen;
+                }
+            }
+
+            &.top-prize {
+
+                &.border:before,
+                &.border:after {
+                    background-color: $accentColour;
+                }
+            }
+
+            /* Button Border Style */
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                left: 0px;
+                height: 27px;
+                z-index: -1;
+            }
+
+            &:before {
+                transform: perspective(5px) rotateX(3deg);
+            }
+
+            &:after {
+                top: 30px;
+                transform: perspective(5px) rotateX(-3deg);
+            }
+
+            &.border:before,
+            &.border:after {
+                border: 2px solid $solidWhite;
+            }
+
+            &.border:before {
+                border-bottom: none;
+                /* to prevent the border-line showing up in the middle of the shape */
+            }
+
+            &.border:after {
+                border-top: none;
+                /* to prevent the border-line showing up in the middle of the shape */
+            }
+        }
+
+        & li:not(.active-prize) {
+            display: none;
+        }
+
+        +p {
+            color: $accentColour;
+        }
+    }
+
+    .walk-away-btn {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 0;
+        right: 0;
+        margin-top: 1em;
+
+        img {
+            display: block;
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .timer-container {
+        position: absolute;
+        top: 0;
+    }
+
+    .question {
+        margin-top: 0;
+        border: 2px solid $solidWhite;
+        padding: .5em;
+    }
+
+    p {
+        text-transform: capitalize;
+    }
+}

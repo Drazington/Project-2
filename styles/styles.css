@@ -1,0 +1,960 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1200px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "copperplate";
+  src: url(../assets/fonts/copperplate_gothic_bold_regular-webfont.woff2) format("woff2"), url(../assets/fonts/copperplate_gothic_bold_regular-webfont.woff) format("woff"), url(../assets/fonts/copperplate_gothic_bold_regular-webfont.ttf) format("truetype");
+}
+@font-face {
+  font-family: "franklin";
+  src: url(../assets/fonts/librefranklin-extrabold-webfont.woff2) format("woff2"), url(../assets/fonts/librefranklin-extrabold-webfont.woff) format("woff"), url(../assets/fonts/librefranklin-extrabold-webfont.ttf) format("truetype");
+}
+html {
+  font-size: 125%;
+}
+
+body,
+button {
+  font-family: "franklin", sans-serif;
+  color: #FFF;
+}
+
+h1 {
+  font-family: "copperplate", sans-serif;
+  font-size: clamp(1.8rem, 0.6364rem + 7.2727vw, 5rem);
+  margin-top: 30vh;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.timer {
+  color: #DC9E3F;
+  font-size: clamp(1rem, 0.6364rem + 2.2727vw, 2rem);
+}
+
+body {
+  background: url(../assets/images/headerBackground.jpg) center/cover no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+body .non-visible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+ul,
+button {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  pointer-events: initial;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header .button {
+  position: relative;
+  display: block;
+  background: transparent;
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFF;
+  border: none;
+  z-index: 2;
+  /* Button Border Style */
+  /* Button hover styles */
+}
+header .button:hover {
+  cursor: pointer;
+}
+header .button:before, header .button:after {
+  position: absolute;
+  content: "";
+  width: 300px;
+  left: 0px;
+  height: 37px;
+  z-index: -1;
+}
+header .button:before {
+  -webkit-transform: perspective(15px) rotateX(3deg);
+          transform: perspective(15px) rotateX(3deg);
+}
+header .button:after {
+  top: 40px;
+  -webkit-transform: perspective(15px) rotateX(-3deg);
+          transform: perspective(15px) rotateX(-3deg);
+}
+header .button.border:before, header .button.border:after {
+  border: 4px solid #FFF;
+}
+header .button.border:before {
+  border-bottom: none;
+  /* to prevent the border-line showing up in the middle of the shape */
+}
+header .button.border:after {
+  border-top: none;
+  /* to prevent the border-line showing up in the middle of the shape */
+}
+header .button.border:hover:before, header .button.border:hover:after {
+  background-color: #DC9E3F;
+}
+
+.rules-screen {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  pointer-events: initial;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.rules-screen h2 {
+  color: #DC9E3F;
+  font-size: clamp(2rem, 1.6364rem + 1.8182vw, 3rem);
+  text-align: center;
+  margin: 0;
+}
+.rules-screen ul {
+  border-bottom: 2px solid #DC9E3F;
+  padding-bottom: 0.5em;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+}
+.rules-screen li {
+  font-size: clamp(0.8rem, 0.7273rem + 0.4545vw, 1rem);
+  line-height: 1.5;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+form input[type=text] {
+  background-color: transparent;
+  color: #FFF;
+  border: 2px solid #FFF;
+  width: 235px;
+  margin: 0.4em 0;
+}
+form .button {
+  position: relative;
+  display: block;
+  background: transparent;
+  width: 250px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFF;
+  border: none;
+  z-index: 2;
+  /* Button Border Style */
+  /* Button hover styles */
+}
+form .button:hover {
+  cursor: pointer;
+}
+form .button:before, form .button:after {
+  position: absolute;
+  content: "";
+  width: 250px;
+  left: 0px;
+  height: 37px;
+  z-index: -1;
+}
+form .button:before {
+  -webkit-transform: perspective(15px) rotateX(3deg);
+          transform: perspective(15px) rotateX(3deg);
+}
+form .button:after {
+  top: 40px;
+  -webkit-transform: perspective(15px) rotateX(-3deg);
+          transform: perspective(15px) rotateX(-3deg);
+}
+form .button.border:before, form .button.border:after {
+  border: 4px solid #FFF;
+}
+form .button.border:before {
+  border-bottom: none;
+  /* to prevent the border-line showing up in the middle of the shape */
+}
+form .button.border:after {
+  border-top: none;
+  /* to prevent the border-line showing up in the middle of the shape */
+}
+form .button.border:hover:before, form .button.border:hover:after {
+  background-color: #DC9E3F;
+}
+
+.game-board-screen {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  pointer-events: initial;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.game-board-screen ul {
+  list-style-type: none;
+  padding: 0;
+}
+.game-board-screen .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 50vh;
+  padding-bottom: 0.7em;
+}
+.game-board-screen .buttons li {
+  width: 100%;
+}
+.game-board-screen .buttons button {
+  position: relative;
+  display: block;
+  background: transparent;
+  width: 100%;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFF;
+  border: none;
+  /* Button Border Style */
+  /* Button hover styles */
+}
+.game-board-screen .buttons button:before, .game-board-screen .buttons button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0px;
+  height: 39px;
+  z-index: -1;
+}
+.game-board-screen .buttons button:before {
+  top: 0px;
+  -webkit-transform: perspective(10px) rotateX(2deg);
+          transform: perspective(10px) rotateX(2deg);
+}
+.game-board-screen .buttons button:after {
+  top: 41px;
+  -webkit-transform: perspective(10px) rotateX(-2deg);
+          transform: perspective(10px) rotateX(-2deg);
+}
+.game-board-screen .buttons button.border:before, .game-board-screen .buttons button.border:after {
+  border: 2px solid #FFF;
+  background-color: #6D7AC3;
+}
+.game-board-screen .buttons button.border:before {
+  border-bottom: none;
+  /* to prevent the border-line showing up in the middle of the shape */
+}
+.game-board-screen .buttons button.border:after {
+  border-top: none;
+  /* to prevent the border-line showing up in the middle of the shape */
+}
+.game-board-screen .buttons button.border:hover:before, .game-board-screen .buttons button.border:hover:after {
+  background-color: #DC9E3F;
+}
+.game-board-screen .score-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.game-board-screen .prizes-container {
+  position: relative;
+}
+.game-board-screen .prize-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.game-board-screen .prize-list li {
+  position: relative;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFF;
+  border: none;
+  /* Button Border Style */
+}
+.game-board-screen .prize-list li.threshold.border:before, .game-board-screen .prize-list li.threshold.border:after {
+  background-color: #6D7AC3;
+}
+.game-board-screen .prize-list li.active-prize.border:before, .game-board-screen .prize-list li.active-prize.border:after {
+  background-color: #479223;
+}
+.game-board-screen .prize-list li.top-prize.border:before, .game-board-screen .prize-list li.top-prize.border:after {
+  background-color: #DC9E3F;
+}
+.game-board-screen .prize-list li:before, .game-board-screen .prize-list li:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0px;
+  height: 27px;
+  z-index: -1;
+}
+.game-board-screen .prize-list li:before {
+  -webkit-transform: perspective(5px) rotateX(3deg);
+          transform: perspective(5px) rotateX(3deg);
+}
+.game-board-screen .prize-list li:after {
+  top: 30px;
+  -webkit-transform: perspective(5px) rotateX(-3deg);
+          transform: perspective(5px) rotateX(-3deg);
+}
+.game-board-screen .prize-list li.border:before, .game-board-screen .prize-list li.border:after {
+  border: 2px solid #FFF;
+}
+.game-board-screen .prize-list li.border:before {
+  border-bottom: none;
+  /* to prevent the border-line showing up in the middle of the shape */
+}
+.game-board-screen .prize-list li.border:after {
+  border-top: none;
+  /* to prevent the border-line showing up in the middle of the shape */
+}
+.game-board-screen .prize-list li:not(.active-prize) {
+  display: none;
+}
+.game-board-screen .prize-list + p {
+  color: #DC9E3F;
+}
+.game-board-screen .walk-away-btn {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 0;
+  right: 0;
+  margin-top: 1em;
+}
+.game-board-screen .walk-away-btn img {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+.game-board-screen .timer-container {
+  position: absolute;
+  top: 0;
+}
+.game-board-screen .question {
+  margin-top: 0;
+  border: 2px solid #FFF;
+  padding: 0.5em;
+}
+.game-board-screen p {
+  text-transform: capitalize;
+}
+
+.modal-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  pointer-events: initial;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal-screen .message {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal-screen .buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal-screen button {
+  margin: 0.5em;
+  position: relative;
+  display: block;
+  background: transparent;
+  width: 250px;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFF;
+  border: none;
+  /* Button Border Style */
+  /* Button hover styles */
+}
+.modal-screen button:before, .modal-screen button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0px;
+  height: 39px;
+  z-index: -1;
+  border: 2px solid #FFF;
+  background-color: #6D7AC3;
+}
+.modal-screen button:before {
+  top: 0px;
+  -webkit-transform: perspective(10px) rotateX(2deg);
+          transform: perspective(10px) rotateX(2deg);
+  border-bottom: none;
+}
+.modal-screen button:after {
+  top: 41px;
+  -webkit-transform: perspective(10px) rotateX(-2deg);
+          transform: perspective(10px) rotateX(-2deg);
+  border-top: none;
+}
+.modal-screen button:hover:before, .modal-screen button:hover:after {
+  background-color: #DC9E3F;
+}
+
+.loader-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: initial;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.loader-screen .loader-message {
+  position: absolute;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  font-size: 1.8rem;
+  text-align: center;
+}
+.loader-screen .loader-message.text-animation {
+  -webkit-animation: zoomtext 1s;
+          animation: zoomtext 1s;
+}
+.loader-screen .loader-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.loader-screen .loader-border,
+.loader-screen .loader-image {
+  position: absolute;
+}
+.loader-screen .loader-border {
+  z-index: 1;
+  inset: 0;
+  border: 16px solid #6D7AC3;
+  border-top: 16px solid #DC9E3F;
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+.loader-screen .loader-image {
+  inset: 12px;
+  background: url(../assets/images/loader-animation.gif) center/cover no-repeat;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes zoomtext {
+  0% {
+    font-size: 0.1rem;
+  }
+  90% {
+    font-size: 2.5rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+@keyframes zoomtext {
+  0% {
+    font-size: 0.1rem;
+  }
+  90% {
+    font-size: 2.5rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .game-board-screen {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .game-board-screen .prizes-container .prize-list li {
+    display: block;
+  }
+  .game-board-screen .timer-container {
+    top: 5%;
+    left: 35%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .game-board-screen .timer-container p {
+    margin: 0;
+  }
+  .game-board-screen .game-board {
+    width: 70%;
+  }
+  .game-board-screen .game-board .question {
+    background-color: #0E0F5C;
+    padding: 1em;
+    margin: 1em;
+  }
+  .game-board-screen .game-board .buttons {
+    padding: 0;
+  }
+  .game-board-screen .game-board .buttons button {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .game-board-screen .game-board .walk-away-btn {
+    top: 5%;
+    left: 0;
+    margin-top: 0;
+  }
+  .game-board-screen .game-board .walk-away-btn img {
+    width: 35px;
+    height: 35px;
+  }
+  .game-board-screen .score-container {
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .game-board-screen .score-container .player-name {
+    margin-top: 0;
+  }
+  .game-board-screen .score-container .prize-list {
+    margin-bottom: 1.5em;
+  }
+  .game-board-screen .score-container .prize-list li {
+    width: 60%;
+    height: 35px;
+    line-height: 35px;
+    /* Button Border Style */
+  }
+  .game-board-screen .score-container .prize-list li:before, .game-board-screen .score-container .prize-list li:after {
+    width: 100%;
+    height: 17px;
+  }
+  .game-board-screen .score-container .prize-list li:before {
+    top: 0px;
+    -webkit-transform: perspective(5px) rotateX(3deg);
+            transform: perspective(5px) rotateX(3deg);
+  }
+  .game-board-screen .score-container .prize-list li:after {
+    top: 17px;
+    -webkit-transform: perspective(5px) rotateX(-3deg);
+            transform: perspective(5px) rotateX(-3deg);
+  }
+  .game-board-screen .score-container .prize-list + p {
+    position: absolute;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotateZ(-10deg);
+            transform: translateX(-50%) rotateZ(-10deg);
+    bottom: 0em;
+    margin: 0;
+  }
+}
+@media (min-width: 996px) {
+  .game-board .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .game-board .buttons li {
+    width: 50%;
+  }
+}
